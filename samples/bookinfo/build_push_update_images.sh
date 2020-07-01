@@ -35,7 +35,7 @@ else
 	shift
 fi
 
-# Process the input arguments. By default, image scanning is disabled. 
+# Process the input arguments. By default, image scanning is disabled.
 PREFIX=istio
 ENABLE_IMAGE_SCAN=false
 echo "$@"
@@ -90,12 +90,12 @@ function run_vulnerability_scanning() {
 }
 
 # Push images. Scan images if ENABLE_IMAGE_SCAN is true.
-for IMAGE in ${IMAGES}; 
-do 
-  echo "Pushing: ${IMAGE}" 
-  docker push "${IMAGE}"; 
-  
-  # $IMAGE has the following format: istio/examples-bookinfo*:"$v".
+for IMAGE in ${IMAGES};
+do
+  echo "Pushing: ${IMAGE}"
+  docker push "${IMAGE}";
+
+  # $IMAGE has the following format: taegyunk91/examples-bookinfo*:"$v".
   # We want to get the sample app name from $IMAGE (the examples-bookinfo* portion)
   # to create the file to store the results of the scan for that image. The first
   # part of the $IMAGE_NAME gets examples-bookinfo*:"$v", and the second part gets
@@ -109,4 +109,4 @@ do
 done
 
 #Update image references in the yaml files
-find . -name "*bookinfo*.yaml" -exec sed -i.bak "s/\\(istio\\/examples-bookinfo-.*\\):[[:digit:]]*\\.[[:digit:]]*\\.[[:digit:]]*/\\1:$VERSION/g" {} +
+find . -name "*bookinfo*.yaml" -exec sed -i.bak "s/\\(taegyunk91\\/examples-bookinfo-.*\\):[[:digit:]]*\\.[[:digit:]]*\\.[[:digit:]]*/\\1:$VERSION/g" {} +

@@ -13,7 +13,7 @@ The bookinfo versions are different from Istio versions since the sample should 
 ## Update docker images in the yaml files
 
 ```bash
-sed -i "s/\(istio\/examples-bookinfo-.*\):[[:digit:]]\.[[:digit:]]\.[[:digit:]]/<your docker image with tag>/g" */bookinfo*.yaml
+sed -i "s/\(taegyunk91\/examples-bookinfo-.*\):[[:digit:]]\.[[:digit:]]\.[[:digit:]]/<your docker image with tag>/g" */bookinfo*.yaml
 ```
 
 ## Push docker images to docker hub
