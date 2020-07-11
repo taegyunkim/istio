@@ -53,7 +53,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: details-v1
+  name: detailsv1
   labels:
     app: details
     version: v1
@@ -104,7 +104,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ratings-v1
+  name: ratingsv1
   labels:
     app: ratings
     version: v1
@@ -155,7 +155,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reviews-v1
+  name: reviewsv1
   labels:
     app: reviews
     version: v1
@@ -195,7 +195,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reviews-v2
+  name: reviewsv2
   labels:
     app: reviews
     version: v2
@@ -235,7 +235,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reviews-v3
+  name: reviewsv3
   labels:
     app: reviews
     version: v3
@@ -299,7 +299,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: productpage-v1
+  name: productpagev1
   labels:
     app: productpage
     version: v1
